@@ -1,5 +1,12 @@
 angular.module('starter.controllers', [])
+.controller('SignInCtrl', function($scope, $state) {
+  console.log('tabs')
+  $scope.signIn = function(user) {
+    console.log('Sign-In', user);
+    $state.go('tab.dash');
+  };
 
+})
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
