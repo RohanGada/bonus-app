@@ -23,19 +23,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
   var i =1 ;
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+  // if(fromState.name !=='signin'){
   //   if(!localStorage.user && toState.name !== 'signin'){
-  //     event.preventDefault()
-  //  var alertPopup = $ionicPopup.alert({
-  //    title: 'Don\'t eat that!',
-  //    template: 'It might taste good'
-  //  });
-   //
-  //  alertPopup.then(function(res) {
-  //    console.log('Thank you for not eating my delicious ice cream cone');
-  //  });
-  //  console.log(event);
-   //
+  //     $state.go('signin');
+  //   }else if(!localStorage.user){
+  //     event.preventDefault();
   //   }
+  // }
    });
 })
 
