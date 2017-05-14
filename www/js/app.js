@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$rootScope,$state,$ionicPopup) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +21,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       StatusBar.styleDefault();
     }
   });
+  var i =1 ;
+  $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+  //   if(!localStorage.user && toState.name !== 'signin'){
+  //     event.preventDefault()
+  //  var alertPopup = $ionicPopup.alert({
+  //    title: 'Don\'t eat that!',
+  //    template: 'It might taste good'
+  //  });
+   //
+  //  alertPopup.then(function(res) {
+  //    console.log('Thank you for not eating my delicious ice cream cone');
+  //  });
+  //  console.log(event);
+   //
+  //   }
+   });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
